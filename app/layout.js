@@ -12,7 +12,7 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <ClerkProvider>
+    <ClerkProvider frontendApi="pk_test_cHJlc2VudC1tYXlmbHktMjYuY2xlcmsuYWNjb3VudHMuZGV2JA">
 
        <html lang="en">
       <body className={inter.className}>
