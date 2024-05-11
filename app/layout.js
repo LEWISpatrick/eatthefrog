@@ -13,7 +13,7 @@ const frontendApi = process.env.REACT_APP_CLERK_PUBLISHABLE_KEY;
 
 export default function RootLayout({ children }) {
   return (
-    <ClerkProvider frontendApi={frontendApi}>
+    <ClerkProvider publishableKey={frontendApi}>
 
        <html lang="en">
       <body className={inter.className}>
