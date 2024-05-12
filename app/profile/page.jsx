@@ -17,7 +17,7 @@ const Page = () => {
     }
 
     const hasContributions = staticContributions.length > 0;
-    const numContributions = staticContributions.length 
+    const numContributions = staticContributions.length -1
     // User content
     return (
         <div className='container mx-auto flex flex-col items-center justify-center h-screen'>

@@ -35,9 +35,9 @@ export const Footer = () => {
             <div className="flex items-center justify-center space-x-4">
                 {Links.map((link, index) => (
                     <Link href={link.href} key={index}>
-                        <a className='hover:opacity-45 transition duration-300'>
+                        <p className='hover:opacity-45 transition duration-300'>
                             {link.icon}
-                        </a>
+                        </p>
                     </Link>
                 ))}
             </div>
