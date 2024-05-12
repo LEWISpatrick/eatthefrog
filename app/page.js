@@ -11,7 +11,6 @@ export default function Home() {
           <Eatmore/>
           <Reviews/>
           <Pricing/>
-          <Footer/>
         </main>
   );
 }

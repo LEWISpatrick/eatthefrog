@@ -1,16 +1,24 @@
-// pages/api/users.js
-import { requireSession, users } from '@clerk/nextjs/api';
+// pages/api/createUser.js
+import { PrismaClient } from '@prisma/client';
 
-export default requireSession(async (req, res) => {
-  const { sessionId } = req;
-  if (!sessionId) {
-    return res.status(401).json({ error: 'Unauthorized' });
-  }
+const prisma = new PrismaClient();
 
-  try {
-    const userList = await users.getUserList();
-    res.status(200).json(userList);
-  } catch (error) {
-    res.status(500).json({ error: error.message });
-  }
-});
+export async function main() {
+  const user = await prisma.user.create({
+    data: {
+      user: 'patrick',
+      email: 'butt@gmailcon',
+      age: 27,
+    }
+
+  });
+  console.log('created user:', user);
+}
+
+main()
+ .catch(e => { 
+  console.error(e.message);
+ })
+ .finally(async () => {
+  await prisma.$disconnect();
+ });
